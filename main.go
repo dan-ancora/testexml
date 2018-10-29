@@ -14,6 +14,8 @@ type XMLEnvelope struct {
 	Body    XmlBody  `xml:"Body"`
 }
 
+//test adi
+
 //type body
 type XmlBody struct {
 	XMLName  xml.Name           `xml:"Body"`
