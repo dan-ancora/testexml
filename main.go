@@ -8,8 +8,8 @@ import (
 	//"strings"
 )
 
-//Cities List strcut for decoding XML
-type XmlEnvelope struct {
+//XMLEnvelope for decoding XML
+type XMLEnvelope struct {
 	XMLName xml.Name `xml:"Envelope"`
 	Body    XmlBody  `xml:"Body"`
 }
@@ -76,7 +76,7 @@ func main() {
 	</soapenv:Body>
 </soapenv:Envelope>`)
 
-	var envelope XmlEnvelope
+	var envelope XMLEnvelope
 	// we unmarshal our byteArray which contains our
 	// xmlFiles content into 'users' which we defined above
 	err := xml.Unmarshal(xresponse, &envelope)
